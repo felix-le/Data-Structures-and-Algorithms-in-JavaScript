@@ -33,4 +33,12 @@ For numbers which are multiples of both three and five print "Fizzbuzz".
 
 - fibonacci an integer in the infinite sequence 1, 1, 2, 3, 5, 8, 13, … of which the first two terms are 1 and 1 and each succeeding term is the sum of the two immediately preceding.
 
-- 
+## Debugger
+
+- wherever you want to check the bugs, you should write down the debugger statement. then cd to its folder.
+- run command: 
+```bash
+$ node inspect "filename.js"
+$ c
+$ copy code
+```
