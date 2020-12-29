@@ -1,4 +1,4 @@
-# Link Youtube
+# Link UDEMY
 
 [Udemy.com](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/lecture/8534250?start=0#overview)
 
