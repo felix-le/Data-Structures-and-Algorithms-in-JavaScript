@@ -25,3 +25,61 @@ function palindrome(str) {
   })
 }
 ```
+
+## for loop
+  #### for ... in
+```bash
+
+const shark = {
+  species: "great white",
+  color: "white",
+  numberOfTeeth: "Infinity",
+}
+
+# Print property names of object
+for (attribute in shark){
+  console.log(attribute)
+}
+
+#output
+# species
+# color
+# numberOfTeeth
+
+#Print property values of object
+for (attribute in shark){
+  console.log(shark[attribute]);
+}
+# Output
+# great white
+# white
+# Infinity
+```
+  #### for .... of
+
+```bash
+let sharks = [ "great white", "tiger", "hammerhead" ];
+
+# Print out each type of shark
+
+for (let shark of sharks){
+  console.log(shark)
+}
+
+# Output
+# great white
+# tiger
+# hammerhead
+
+# // Loop through both index and element
+for (let [index, shark] of sharks.entries()) {
+    console.log(index, shark);
+}
+
+
+# Output
+# 0 'great white'
+# 1 'tiger'
+# 2 'hammerhead'
+```
+
