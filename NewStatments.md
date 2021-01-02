@@ -139,3 +139,132 @@ function capitalize(str) {
   return words.join(' ');
 }
 ```
+
+
+### render staircase
+
+<!-- // --- Directions
+// Write a function that accepts a positive number N.
+// The function should console log a step shape
+// with N levels using the # character.  Make sure the
+// step has spaces on the right hand side!
+// --- Examples
+//   steps(2)
+//       '# '
+//       '##'
+//   steps(3)
+//       '#  '
+//       '## '
+//       '###'
+//   steps(4)
+//       '#   '
+//       '##  '
+//       '### '
+//       '####' -->
+
+
+```bash
+function steps(n) {
+  for(let row = 0; row < n; row++) {
+    let stair = '';
+    for(let col = 0; col < n; col++) {
+      if(col <= row){
+        stair += '#'
+      } else{
+        stair += ' ';
+      }
+    }
+    console.log(stair)
+  }
+}
+```
+### pyramid
+// --- Directions
+// Write a function that accepts a positive number N.
+// The function should console log a pyramid shape
+// with N levels using the # character.  Make sure the
+// pyramid has spaces on both the left *and* right hand sides
+// --- Examples
+//   pyramid(1)
+//       '#'
+//   pyramid(2)
+//       ' # '
+//       '###'
+//   pyramid(3)
+//       '  #  '
+//       ' ### '
+//       '#####'
+```bash
+function pyramid(n, row = 0, level ='') {
+  if (row === n) {
+    return;
+  }
+
+  if(level.length === 2* n-1){
+    console.log(level);
+    return pyramid(n, row + 1)
+  }
+
+  const midpoint = Math.floor((2*n-1)/2);
+  let add;
+
+  if(midpoint - row <= level.length && midpoint + row >= level.length){
+    add = '#'
+  } else{
+    add = ' ';
+  }
+
+  pyramid(n, row, level + add)
+}
+
+```
+
+
+
+### max Char
+// --- Directions
+// Write a function that returns the number of vowels
+// used in a string.  Vowels are the characters 'a', 'e'
+// 'i', 'o', and 'u'.
+// --- Examples
+//   vowels('Hi There!') --> 3
+//   vowels('Why do you ask?') --> 4
+//   vowels('Why?') --> 0
+```bash
+function vowels(str) {
+  let chars = {};
+  let numberVowel = 0;
+  const  clearString = str.replace(/[^\w]/g, '').toLowerCase();
+  for(let char of clearString){
+    if(char === 'a' || char ==='e' || char === 'i' || char === 'o' || char === 'u'){
+      numberVowel = numberVowel + 1 || 1;
+      chars[char] = chars[char] + 1 || 1;
+    }
+  }
+  console.log("🚀 ~ file: index.js ~ line 12 ~ vowels ~ chars", chars)
+
+  return numberVowel;
+}
+```
+
+### includes
+```bash
+function vowels(str){
+  let counter = 0;
+  let checker = ['a','e', 'i', 'o', 'u'];
+  for (let char of str.toLowerCase()){
+    if(checker.includes(char)){
+      counter++;
+    }
+  }
+  return counter;
+}
+
+
+
+function vowels(str){
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
+}
+
+```
