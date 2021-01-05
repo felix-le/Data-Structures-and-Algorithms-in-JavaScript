@@ -111,6 +111,43 @@ function chunk(array, size) {
 console.log(chunk([1, 2, 3, 4, 5],3))
 ```
 
+# Apply
+
+
+```bash
+# // --- Directions
+# // Print out the n-th entry in the fibonacci series.
+# // The fibonacci series is an ordering of numbers where
+# // each number is the sum of the preceeding two.
+# // For example, the sequence
+# //  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+# // forms the first ten entries of the fibonacci series.
+# // Example:
+# //   fib(4) === 3
+function memoize(fn){
+  const cache = {};
+  return function (...args){
+    if(cache[args]){
+      return cache[args];
+    }
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  }
+}
+function slowFib(n) {
+  if (n < 2){
+    return n
+  }
+  return fib(n - 1) + fib(n -2);
+}
+
+const fib = memoize(slowFib);
+
+```
+
 
 ### Remove special symphony 
 ```bash
@@ -179,22 +216,22 @@ function steps(n) {
 }
 ```
 ### pyramid
-// --- Directions
-// Write a function that accepts a positive number N.
-// The function should console log a pyramid shape
-// with N levels using the # character.  Make sure the
-// pyramid has spaces on both the left *and* right hand sides
-// --- Examples
-//   pyramid(1)
-//       '#'
-//   pyramid(2)
-//       ' # '
-//       '###'
-//   pyramid(3)
-//       '  #  '
-//       ' ### '
-//       '#####'
 ```bash
+# // --- Directions
+# // Write a function that accepts a positive number N.
+# // The function should console log a pyramid shape
+# // with N levels using the # character.  Make sure the
+# // pyramid has spaces on both the left *and* right hand sides
+# // --- Examples
+# //   pyramid(1)
+# //       '#'
+# //   pyramid(2)
+# //       ' # '
+# //       '###'
+# //   pyramid(3)
+# //       '  #  '
+# //       ' ### '
+# //       '#####'
 function pyramid(n, row = 0, level ='') {
   if (row === n) {
     return;

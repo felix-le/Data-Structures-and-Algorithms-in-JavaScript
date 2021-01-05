@@ -42,3 +42,28 @@ $ node inspect "filename.js"
 $ c
 $ copy code
 ```
+
+# Runtime complexity
+
+Describes the performance of an algorithm. 
+
+
+1. constant time - the algorithm will always take the same amount of time. O(1)
+2. logarithmic time: search.
+3. Linear time: if you see a for loop spanning from 0 to array length, you probably have 'n', or linear runtime. O(n)
+4. Quasilinear time:
+5. Quadratic time: every element in a collection has to be compared to each others. O(n^2)
+6. Exponential time: if you add a "single" element to a collection, the processing power required doubles.
+----------------------------------------------------------------
+
+# Queue
+
+Enqueuing or adding ==> dequeuing or removing.
+
+First In First Out
+
+F-I-F-O
+
+## stack  
+first in last out;
+F-I-L-O
