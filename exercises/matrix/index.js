@@ -30,34 +30,33 @@ function matrix(n) {
 
     // Top row
     for(let i = startColumn; i <=endColumn; i++){
-      results[startRow][i] = counter;
+      result[startRow][i] = counter;
       counter++;
     }
     startRow++;
 
     // Right columns
     for(let i= startRow; i <=endRow; i++){
-      results[i][endColumn] = counter;
+      result[i][endColumn] = counter;
       counter++;
     }
     endColumn --;
-
     // Bottom row
     for(let i = endColumn; i >=startColumn; i--){
-      results[endRow][i] = counter;
+      result[endRow][i] = counter;
       counter++;
     }
     endRow --;
 
     // start columns
     for(let i = endRow; i>=startRow; i--){
-      results[i][startColumn] = counter;
+      result[i][startColumn] = counter;
       counter++;
     }
-    startcolumn ++;
+    startColumn ++;
 
   }
-  return results;
+  return result;
 }
 
 module.exports = matrix;

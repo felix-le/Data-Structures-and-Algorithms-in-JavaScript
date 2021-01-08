@@ -71,4 +71,4 @@ F-I-L-O
 ## Linked lists
 - Is an ordered collection of data.
 - it contains a number of different nodes and so on the screen right here you can see four separate nodes each node contains some amount of data along with reference to the next node.
-- 
+
