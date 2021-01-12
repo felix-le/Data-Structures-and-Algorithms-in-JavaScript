@@ -16,16 +16,16 @@ function palindrome(str) {
 module.exports = palindrome;
 
 // function palindrome(str) {
-//   if(!str){
-//     return false;
-//   } else{
-//     const reversed = str.split('').reduce((rev, char) => char + rev,'');
-//     if(reversed === str){
-//       return true;
-//     } else{
-//       return false;
-//     }
-//   }
+  // if(!str){
+  //   return false;
+  // } else{
+  //   const reversed = str.split('').reduce((rev, char) => char + rev,'');
+  //   if(reversed === str){
+  //     return true;
+  //   } else{
+  //     return false;
+  //   }
+  // }
 // }
 
 // function palindrome(str) {
