@@ -20,7 +20,6 @@
 //   }
 //   return false;
 // };
-// console.log(isPerfectSquare(16));
 const isPerfectSquare = function (num) {
   if (num === 1) {
     return true;
