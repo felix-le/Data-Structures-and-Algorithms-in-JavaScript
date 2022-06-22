@@ -25,7 +25,6 @@ class SinglyLinkedList {
     this.length++; // increase the length of the list
     return this; // return the list
   }
-
   pop() {
     if (!this.head) return undefined;
     let current = this.head; // set current to the head
@@ -55,7 +54,6 @@ class SinglyLinkedList {
     }
     return currentHead;
   }
-
   unshift(data) {
     // if list = empty -> set the val is the head and tail
     let node = new Node(data);
@@ -64,7 +62,6 @@ class SinglyLinkedList {
       this.tail = this.head;
     }
     // if list != empty -> set the head of the head is new node and the tail is current head.
-
     node.next = this.head;
     this.head = node;
     this.length++;
@@ -92,7 +89,6 @@ class SinglyLinkedList {
 
     return currentNode;
   }
-
   set(index, val) {
     // validate index
 
@@ -119,7 +115,6 @@ class SinglyLinkedList {
     current.data = val;
     return true;
   }
-
   // set(index, val) {
   //   var foundNode = this.get(index);
   //   if (foundNode) {
@@ -128,7 +123,6 @@ class SinglyLinkedList {
   //   }
   //   return false;
   // }
-
   insert(i, val) {
     // adding a node to the Linked List at a specific position
 
@@ -152,7 +146,6 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
-
   remove(i) {
     if (i < 0 || i >= this.length) return undefined;
 
@@ -173,7 +166,6 @@ class SinglyLinkedList {
     this.length--;
     return removed;
   }
-
   reverse() {
     let node = this.head;
     this.head = this.tail;
@@ -208,7 +200,6 @@ class SinglyLinkedList {
     }
     return this;
   }
-
   print() {
     var arr = [];
     var current = this.head;
@@ -221,7 +212,13 @@ class SinglyLinkedList {
 }
 
 let list = new SinglyLinkedList();
-list.push(100);
-list.push(201);
-list.push(250);
-list.push(350);
+// list has
+
+// this.head = null;
+// this.tail = null;
+// this.length = 0;
+
+// list[a,b,c]
+// a.data, a.next ...
+
+// c.next = null
