@@ -64,7 +64,7 @@ function isAlphaNumeric(str) {
 }
 
 function isPalindrome(str) {
-  const strArr = Array.from(str.toLowerCase());
+  const strArr = str.toLowerCase();
 
   let left = 0;
   let right = strArr.length - 1;
