@@ -23,6 +23,17 @@ function merge(arr1, arr2) {
   console.log(results);
   return results;
 }
-const arr1 = [1, 4, 7, 10];
-const arr2 = [2, 3, 6, 9, 20];
-merge(arr1, arr2);
+
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
+
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+}
+
+const arr = [1, 2, 65, 3, 32, 43, 12, 67, 88, 333, 44, 22, 99, 09, 90];
+
+mergeSort(arr);
